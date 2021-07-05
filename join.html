@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Register New Account</title>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        main {
+            height: 100vh;
+            width: 100vw;
+            background-image: url('image/backh.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            overflow-y: scroll;
+            border-top: 3px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="py-4 ">
+                <a href="index.html"><img src="image/logo2.jpg" alt="Logo"></a>
+            </div>
+    </header>
+    <main class="p-md-2 p-1">
+        <div class="container p-md-3 p-2">
+            <div class="col-12  col-lg-8 col-xl-6 bg-white py-4 px-3 rounded shadow-sm mx-auto">
+                <form>
+                    <div class="form-group">
+                        <label for="Country"><span class="text-danger">*</span>Select Country</label>
+                        <input list="country1" class="form-control" id="country" value="Pakistan" required
+                            autocomplete="off">
+                        <datalist id="country1">
+                            <option value="Pakistan"></option>
+                            <option value="India"></option>
+                            <option value="Nepal"></option>
+                            <option value="Afghanistan"></option>
+                            <option value="UAE"></option>
+                            <option value="Turkey"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                            <option value="Example"></option>
+                        </datalist>
+                    </div>
+                    <div class="form-group ">
+                        <label for="Email"><span class="text-danger">*</span>Please select trade role:</label> <br>
+                        <div class="d-flex justify-content-around col-6 ">
+                            <input type="radio" name="check" class="mt-1" checked> Buyer
+                            <input type="radio" name="check" class="mt-1"> Seller
+                            <input type="radio" name="check" class="mt-1"> Both
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name"><span class="text-danger">*</span>Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Please Enter your full name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email"><span class="text-danger">*</span>Email address</label>
+                        <input type="email" class="form-control" id="Email"
+                            placeholder="please set the email as the login page" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password"><span class="text-danger">*</span>Login Password</label>
+                        <input type="password" class="form-control" id="Password"
+                            placeholder="please set the login password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password2"><span class="text-danger">*</span>Confirm Password</label>
+                        <input type="password" class="form-control" id="Password2"
+                            placeholder="please set the login password again" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone"><span class="text-danger">*</span>Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" value="+92" maxlength="13" required>
+                    </div>
+                    <div class="container mt-3">
+                        <a href="login.html" class="float-right " style="font-weight: 14px;">Already have an Account</a>
+                        <input type="checkbox" name="agre" id="agre">
+                        While creating a website account: I agree to abide by the <a href="">site.com Membership
+                            Agreement-</a> Willing to receive emails from site.com members and services
+                        <button type="submit" class="btn btn-warning font-weight-bold w-100 mt-2" id="btn">Agree and
+                            Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    </div>
+</body>
+
+</html>

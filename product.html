@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Product</title>
+    <style>
+        /* The colour of the indicators */
+        .blog .carousel-indicators li {
+            background: #a3a3a3;
+            border-radius: 50%;
+            width: 14px;
+            height: 0px;
+        }
+
+        .blog .carousel-indicators .active {
+            background: #707070;
+        }
+
+        .nav-btn>li>a.active {
+            background-color: #FF6A00 !important;
+        }
+
+        .nav-btn-dt>li>a.active {
+            border: 2px solid #FF6A00 !important;
+            background-color: white !important;
+            color: black !important;
+            padding: 5px 10px !important;
+            font-weight: bolder !important;
+        }
+
+
+        .tcb-product-slider {
+            background: #333;
+            background-image: url(https://unsplash.it/1240/530?image=721);
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 100px 0;
+        }
+
+        .tcb-product-slider .carousel-control {
+            width: 5%;
+        }
+
+        .tcb-product-item a {
+            color: #147196;
+        }
+
+        .tcb-product-item a:hover {
+            text-decoration: none;
+        }
+
+        .tcb-product-item .tcb-hline {
+            margin: 10px 0;
+            height: 1px;
+            background: #ccc;
+        }
+
+        @media all and (max-width: 768px) {
+            .tcb-product-item {
+                margin-bottom: 30px;
+            }
+        }
+
+        .tcb-product-photo {
+            text-align: center;
+            height: 180px;
+            background: #fff;
+        }
+
+        .tcb-product-photo img {
+            height: 100%;
+            display: inline-block;
+        }
+
+        .tcb-product-info {
+            background: #f0f0f0;
+            padding: 15px;
+        }
+
+        .tcb-product-title h4 {
+            margin-top: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .tcb-product-rating {
+            color: #acacac;
+        }
+
+        .tcb-product-rating .active {
+            color: #FFB500;
+        }
+
+        .tcb-product-price {
+            color: firebrick;
+            font-size: 18px;
+        }
+
+
+
+        .details {
+            margin: 50px 0;
+        }
+
+        .details h1 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 3px;
+        }
+
+        .details .back-link {
+            text-align: center;
+        }
+
+        .details .back-link a {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 15px 30px;
+            background: #333;
+            color: #fff;
+            border-radius: 24px;
+        }
+
+        .details .back-link a svg {
+            margin-right: 10px;
+            vertical-align: text-top;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="container-fluid text-secondary">
+            <div class="row py-3 border">
+                <div class="col-12 col-lg-2 ">
+                    <a href="index.html">
+                        <img src="image/logo2.jpg" alt="logo" class="img-fluid mx-auto d-block">
+                    </a>
+                </div>
+                <div class="col-12 pt-1 col-lg-8 px-5 px-lg-0 ">
+                    <form action="">
+                        <div class="b-alibaba bg-white  rounded-pill overflow-hidden-sm">
+                            <div class="input-group h-40">
+                                <div class="input-group-prepend d-none d-sm-block">
+                                    <button class="btn bg-white pl-4  pr-2 dropdown-toggle rounded-pill h-40 "
+                                        type="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Products</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Products</a>
+                                        <a class="dropdown-item" href="#">Suppliers</a>
+                                    </div>
+                                </div>
+                                <input type="text"
+                                    class="form-control pl-2 border-bottom-0 border-top-0 border-left border-right-0 h-40"
+                                    placeholder="What are you looking for...">
+                                <div class="input-group-append bg-white px-3 py-2 h-40 border-0 d-none d-sm-block"><i
+                                        class="fas fa-camera" id="cam"></i></div>
+                                <button class="input-group-append search-button"><i class="fas fa-search"></i>
+                                    Search</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="col-lg-2 left-side text-center col-12 pt-3 pt-lg-0 ">
+                    <div class="row d-flex justify-content-around">
+                        <div id="user-box">
+                            <i class="far fa-user"></i>
+                            <div class="d-inline-block text-center mx-3">
+                                <a href="signin.html">Sign In</a> <br>
+                                <a href="join.html">join Free</a>
+                            </div>
+                        </div>
+                        <div id="msg-box">
+                            <i class="fas fa-comment-dots d-block"></i>
+                            <a href="">Messages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- upload img -->
+        <div class="upload-img rounded-lg shadow">
+            <p class="bg-danger text-light d-inline-block px-2  position-absolute" id="x"
+                style="cursor: pointer; top: 1.9%; right: 1%;">x</p>
+            <label for="file" class="btn bg-white border">Upload Image</label>
+            <input type="file" name="file" id="file" hidden>
+            <p>Max 5MB per Image</p>
+        </div>
+        <!-- msg box star -->
+        <div class="msg-boxs text-center text-secondary">
+            <div class="user-box shadow p-3   bg-white ">
+                <h5 class="text-left font-weight-bold">Get Started Now</h5>
+                <a href="signin.html" class="bg-alibaba d-block p-1 text-white">Sign In</a>
+                <p>or</p>
+                <a href="join.html">join Free</a>
+            </div>
+            <div class="msg-box shadow p-2 bg-white ">
+                <p>Get Started Now</p>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    <!-- nav start -->
+    <nav class="bg-white border py-2  ">
+        <div class="text-center d-lg-none" style="font-size: 30px;">
+            <i class="fas fa-align-justify" id="btn-burg"></i>
+        </div>
+        <ul class="list-unstyled d-lg-flex mb-0 justify-content-md-start text-center d-none " id="nav-li">
+            <li class="border-right bg-white px-3" id="">
+                <i class="fas fa-align-justify d-none d-lg-inline-block"></i>
+                Categories <i class="fas fa-caret-down"></i>
+                <!-- Categories list -->
+                <div class="li-list">
+                    <div class=" bg-white  p-4 border shadow position-relative li-list-child">
+                        <ul class="list-unstyled">
+                            <li class="p-2">
+                                <a href="">Example 1</a> / <a href="">Example 1A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 2</a> / <a href="">Example 2A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 3</a> / <a href="">Example 3A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 4</a> / <a href="">Example 4A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 5</a> / <a href="">Example 5A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 6</a> / <a href="">Example 6A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 7</a> / <a href="">Example 7A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 8</a> / <a href="">Example 8A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 9</a> / <a href="">Example 9A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 10</a> / <a href="">Example 10A</a> <i
+                                    class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 11</a> / <a href="">Example 11A</a> <i
+                                    class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 112</a> / <a href="">Example 12A</a> <i
+                                    class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </a>
+            </li>
+            <li class=" px-3"> Help <i class="fas fa-caret-down"></i>
+                <div class="li-list" style="left: -35%;">
+                    <div class=" bg-white  p-4 d-block d-lg-inline-block border shadow position-relative">
+                        <ul class="list-unstyled">
+                            <li class="p-2">
+                                <i class="fas fa-caret-right"></i>
+                                <a href="">Example 1</a>
+                            </li>
+                            <li class="p-2">
+                                <i class="fas fa-caret-right"></i>
+                                <a href="">Example 1</a>
+                            </li>
+                            <li class="p-2">
+                                <i class="fas fa-caret-right"></i>
+                                <a href="">Example 1</a>
+                            </li>
+                            <li class="p-2">
+                                <i class="fas fa-caret-right"></i>
+                                <a href="">Example 1</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!-- nav end -->
+    <!-- main start -->
+    <main>
+        <div class="container-fluid px-5 position-relative " style="background-color: #F2F3F7;">
+            <div class="row pt-1 ">
+                <div class="col-9">
+                    <div class="row py-5 bg-white rounded">
+                        <div class="col-4 position-relative">
+                            <div class="position-sticky" style="top: 0%;">
+                                <div class="">
+                                    <img src="image/Samsung-Galaxy-S21-02.jpg" alt="main-pic" class="img-fluid">
+                                </div>
+                                <div class="row d-flex justify-content-around" style="cursor: pointer;">
+                                    <div class="img" style="width: 50px;"><img src="image/50x50.jpg" alt="img"
+                                            class="img-fluid"></div>
+                                    <div class="img" style="width: 50px;"><img src="image/150x50.jpg" alt="img"
+                                            class="img-fluid"></div>
+                                    <div class="img" style="width: 50px;"><img src="image/250x50.jpg" alt="img"
+                                            class="img-fluid"></div>
+                                    <div class="img" style="width: 50px;"><img src="image/350x50.jpg" alt="img"
+                                            class="img-fluid"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="">
+                                <h6 class="font-weight-bolder">i12 pro max 6.7-inch high-definition face recognition
+                                    original smartphone 12GB+512GB
+                                    long standby time Android mobile phone</h6>
+                                <p class="text-danger"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star text-secondary"></i> <i>4.1</i> <a href="">39 Rewies</a> <a
+                                        href="">185 Buyers</a></p>
+                            </div>
+                            <div class="row border-top border-bottom py-2" style="font-size: 14px;">
+                                <div class="col-4">
+                                    <p>1 - 199 Pieces</p>
+                                    <p class="text-danger font-weight-bolder mb-0">$57.00</p>
+                                </div>
+                                <div class="col-4">
+                                    <p>200 - 4999 Pieces</p>
+                                    <p class="text-danger font-weight-bolder mb-0">$54.00</p>
+                                </div>
+                                <div class="col-4">
+                                    <p>>=5000 Pieces</p>
+                                    <p class="text-danger font-weight-bolder mb-0">$48.00</p>
+                                </div>
+                            </div>
+                            <div class=" mt-2 " style="font-size: 14px;">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="d-inline-block text-secondary">RAM:</p>
+                                    </div>
+                                    <div class="col-9">
+
+                                        <ul class="nav-btn-dt nav nav-pills mb-3" id="pills-tab" role="tablist"
+                                            style="font-size: 12px;">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill"
+                                                    href="" role="tab">12 G</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href=""
+                                                    role="tab">8 G</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="d-inline-block text-secondary">Storage Capacity:</p>
+                                    </div>
+                                    <div class="col-9">
+                                        <ul class="nav-btn-dt nav nav-pills mb-3" id="pills-tab" role="tablist"
+                                            style="font-size: 12px;">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill"
+                                                    href="" role="tab">
+                                                    512GB UK Plug</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href=""
+                                                    role="tab">
+                                                    512GB US Plug</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href=""
+                                                    role="tab">
+                                                    512GB EU Plug</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="d-inline-block text-secondary">Color:</p>
+                                    </div>
+                                    <div class="col-9">
+                                        <ul class="list-unstyled">
+                                            <li class="mt-1 p-2 d-flex justify-content-between ">
+                                                <img src="image/150x50.jpg" alt="1" width="35px"
+                                                    class="p-1 rounded border">
+                                                <p class="d-inline-block"> US$57.00</p>
+                                                <div class="d-inline-block align-middle">
+                                                    <input type="number" name="quantity" placeholder="Quantity"
+                                                        class="d-inline-block align-middle" min="0"
+                                                        style="width: 150px; display: inline-block;">
+                                                </div>
+                                            </li>
+                                            <li class="mt-1 p-2 d-flex justify-content-between ">
+                                                <img src="image/350x50.jpg" alt="1" width="35px"
+                                                    class="p-1 rounded border">
+                                                <p class="d-inline-block"> US$57.00</p>
+                                                <div class="d-inline-block align-middle">
+                                                    <input type="number" name="quantity" placeholder="Quantity"
+                                                        class="d-inline-block align-middle" min="0"
+                                                        style="width: 150px; display: inline-block;">
+                                                </div>
+                                            </li>
+                                            <li class="mt-1 p-2 d-flex justify-content-between ">
+                                                <img src="image/250x50.jpg" alt="1" width="35px"
+                                                    class="p-1 rounded border">
+                                                <p class="d-inline-block"> US$57.00</p>
+                                                <div class="d-inline-block align-middle">
+                                                    <input type="number" name="quantity" placeholder="Quantity"
+                                                        class="d-inline-block align-middle" min="0"
+                                                        style="width: 150px; display: inline-block;">
+                                                </div>
+                                            </li>
+                                            <li class="mt-1 p-2 d-flex justify-content-between ">
+                                                <img src="image/50x50.jpg" alt="1" width="35px"
+                                                    class="p-1 rounded border">
+                                                <p class="d-inline-block"> US$57.00</p>
+                                                <div class="d-inline-block align-middle">
+                                                    <input type="number" name="quantity" placeholder="Quantity"
+                                                        class="d-inline-block align-middle" min="0"
+                                                        style="width: 150px; display: inline-block;">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="d-inline-block text-secondary">Samples:</p>
+                                    </div>
+                                    <div class="col-9">
+                                        <p> 12G , 512GB UK Plug ,
+                                            $57.00/Piece | 1 Piece (Min. Order) <br> <a href="">Sample Order</a></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="d-inline-block text-secondary">Customization:</p>
+                                    </div>
+                                    <div class="col-9">
+                                        <p>Customized logo <span class="text-secondary">(Min. Order: 200 Pieces)</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second section start -->
+                    <div class="row" style="background-color: #F2F3F7;">
+                        <h5 class="font-weight-bolder p-2">You may also like</h5>
+                        <div class="container">
+                            <div class="row blog">
+                                <div class="col-md-12">
+                                    <div id="blogCarousel" class="carousel slide" data-ride="carousel">
+
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#blogCarousel" data-slide-to="1"></li>
+                                        </ol>
+
+                                        <!-- Carousel items -->
+                                        <div class="carousel-inner" style="height: 330px;">
+
+                                            <div class="carousel-item active">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!--.row-->
+                                            </div>
+                                            <!--.item-->
+
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!--.row-->
+                                            </div>
+                                            <!--.item-->
+
+                                        </div>
+                                        <!--.carousel-inner-->
+                                    </div>
+                                    <!--.Carousel-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second section end -->
+                    <!-- third section start -->
+                    <ul class="nav-btn nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                                role="tab" aria-controls="pills-home" aria-selected="true">Product Details</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                                role="tab" aria-controls="pills-profile" aria-selected="false">Company Profiles</a>
+                        </li>
+
+                    </ul>
+                    <!-- first tab div start -->
+                    <div class="tab-content bg-white p-2" id="pills-tabContent">
+                        <div class="tab-pane fade show active p-3" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <h5 class="font-weight-bolder bg-black">Overview</h5>
+                            <hr>
+                            <p class="font-weight-bolder bg-black">Quick Details</p>
+                            <div class="row" style="font-size: 12px;">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Brand Name:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>UOP</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Condition:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>New</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="font-size: 12px;">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">CPU:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>Quad+Quad Core
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Screen:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>6.7</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="font-size: 12px;">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Processor Brand:
+                                            </p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>MTK</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Front Camera
+                                                :</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>12mp</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="font-size: 12px;">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Rear Camera:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>48 MP
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Screen Resolution:
+                                            </p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>2560x1440
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="font-size: 12px;">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Cellular:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>GSM, WCDMA, 5G, CDMA, CDMA2000, TD-SCDMA, GSM/CDMA
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Display Type:
+                                            </p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>LCD</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="font-size: 12px;">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Operation System:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>ANDROID</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Feature:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>3G, 4g, Auto Focus, Build in Flash, EMAIL, FM Radio, GPS Navigation, MP3
+                                                Playback, Touch Screen, wifi, Waterproof, Sunscreen, 5G, Dual SIM Card
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="font-size: 12px;">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Brand Name:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>UOP</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Condition:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>New</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="font-size: 12px;">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Brand Name:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>UOP</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Condition:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>New</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="font-size: 12px;">
+
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Phone Name:
+                                            </p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>
+                                                I12pro max</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">SIM Card:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>Dual SIM Card Dual Standby</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="font-size: 12px;">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Screen Size:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>6.7Inch</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <p class="font-weight-bolder bg-black mt-5">Quick Details</p>
+                            <div class="row" style="font-size: 12px;">
+                                <div class="col-8">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Selling Units:
+                                            </p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>
+                                                Single item</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Single package size:
+                                            </p>
+                                        </div>
+                                        <div class="col-8">
+                                            </p>18X8X6 cm<p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Single gross weight:
+                                            </p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p>0.480 kg
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <p class="text-secondary">Lead Time:</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <table class="table-bordered table-hover">
+
+                                                <tr>
+                                                    <td class="p-3">Quantity(Pieces) </td>
+                                                    <td class="p-3">1 - 20 </td>
+                                                    <td class="p-3">>20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p-3">Est. Time(days) </td>
+                                                    <td class="p-3">7 </td>
+                                                    <td class="p-3">To be negotiated
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="bg-secondary p-2 mt-2 text-light font-weight-bolder">Product Description</h3>
+                            <table class="table-bordered" style="font-size: 14px;">
+                                <tbody>
+                                    <tr>
+                                        <td class="p-2">
+                                            <div class="magic-2"><span
+                                                    data-spm-anchor-id="a2700.pc-decorate.0.i57.20c03333QFbNcm"><b>Product
+                                                        Name</b></span></div>
+                                        </td>
+                                        <td class="p-2">
+                                            <div class="magic-3">I12proMax</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2">
+                                            <div class="magic-2"><b>Standby</b></div>
+                                        </td>
+                                        <td class="p-2">
+                                            <div class="magic-3"
+                                                data-spm-anchor-id="a2700.wholesale.0.i80.5b39415bokALdu">Dual sim dual
+                                                standby(A slot support SIM card,<br>another slot support SIM card or TF
+                                                card)</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2">
+                                            <div class="magic-2"><b>Screen</b></div>
+                                        </td>
+                                        <td class="p-2">
+                                            <div class="magic-3">6.7HD+ 1440 * 3088</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2">
+                                            <div class="magic-2"><b>Package Included</b></div>
+                                        </td>
+                                        <td class="p-2">
+                                            <div class="magic-3">1 x Smartphone,<br>1 x Charger Adapter<br>1 x
+                                                Headphones,<br>1 x User Manual<br>1x phone case<br>1x Protection film
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2">
+                                            <div class="magic-2"><b>Frequency</b></div>
+                                        </td>
+                                        <td class="p-2">
+                                            <div class="magic-3">GSM850/900/1800/1900MHz, 3G: WCDMA850/2100MHz,<br>4G 5G
+                                                LTE</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2">
+                                            <div class="magic-2"><span
+                                                    data-spm-anchor-id="a2700.pc-decorate.0.i49.20c03333QFbNcm"><b>Colors</b></span>
+                                            </div>
+                                        </td>
+                                        <td class="p-2">
+                                            <div class="magic-3">White , Blue, Black,Gold</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2">
+                                            <div class="magic-2"><b>Multi Function</b></div>
+                                        </td>
+                                        <td class="p-2">
+                                            <div class="magic-3">Full screen, Face recognition,Screen finger print, Dual
+                                                SIM, Wifi, GPS, Gravity Sensor, Alarm ,Calendar ,Calculator
+                                                ,Audio<br>recorder ,Video recorder, WAP/MMS/GPR, Image
+                                                viewer,E-Book,World clock,Tasks card rear flash IML rear cover</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="font-weight-bolder m-2">Recommended by seller</p>
+                            <div class="row" style=" font-size: 11px;">
+                                <div class="col-3">
+                                    <a href="">
+                                        <div class="card text-center mt-2" style="width: auto;">
+                                            <img src="image/Samsung-Galaxy-S21-02.jpg" class="card-img-top "
+                                                alt="card image">
+                                            <div class="px-2">
+                                                <p class="card-text m-0 text-secondary">Recommended by seller
+                                                    i12 Pro+ 6.1 inch Android S....</p>
+                                                <h6 class="font-weight-bolder">US $29:00 - $55:00</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="">
+                                        <div class="card text-center mt-2" style="width: auto;">
+                                            <img src="image/Samsung-Galaxy-S21-02.jpg" class="card-img-top "
+                                                alt="card image">
+                                            <div class="px-2">
+                                                <p class="card-text m-0 text-secondary">Recommended by seller
+                                                    i12 Pro+ 6.1 inch Android S....</p>
+                                                <h6 class="font-weight-bolder">US $29:00 - $55:00</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="">
+                                        <div class="card text-center mt-2" style="width: auto;">
+                                            <img src="image/Samsung-Galaxy-S21-02.jpg" class="card-img-top "
+                                                alt="card image">
+                                            <div class="px-2">
+                                                <p class="card-text m-0 text-secondary">Recommended by seller
+                                                    i12 Pro+ 6.1 inch Android S....</p>
+                                                <h6 class="font-weight-bolder">US $29:00 - $55:00</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="">
+                                        <div class="card text-center mt-2" style="width: auto;">
+                                            <img src="image/Samsung-Galaxy-S21-02.jpg" class="card-img-top "
+                                                alt="card image">
+                                            <div class="px-2">
+                                                <p class="card-text m-0 text-secondary">Recommended by seller
+                                                    i12 Pro+ 6.1 inch Android S....</p>
+                                                <h6 class="font-weight-bolder">US $29:00 - $55:00</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row mt-3" style=" font-size: 11px;">
+                                <div class="col-3">
+                                    <a href="">
+                                        <div class="card text-center mt-2" style="width: auto;">
+                                            <img src="image/Samsung-Galaxy-S21-02.jpg" class="card-img-top "
+                                                alt="card image">
+                                            <div class="px-2">
+                                                <p class="card-text m-0 text-secondary">Recommended by seller
+                                                    i12 Pro+ 6.1 inch Android S....</p>
+                                                <h6 class="font-weight-bolder">US $29:00 - $55:00</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="">
+                                        <div class="card text-center mt-2" style="width: auto;">
+                                            <img src="image/Samsung-Galaxy-S21-02.jpg" class="card-img-top "
+                                                alt="card image">
+                                            <div class="px-2">
+                                                <p class="card-text m-0 text-secondary">Recommended by seller
+                                                    i12 Pro+ 6.1 inch Android S....</p>
+                                                <h6 class="font-weight-bolder">US $29:00 - $55:00</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="">
+                                        <div class="card text-center mt-2" style="width: auto;">
+                                            <img src="image/Samsung-Galaxy-S21-02.jpg" class="card-img-top "
+                                                alt="card image">
+                                            <div class="px-2">
+                                                <p class="card-text m-0 text-secondary">Recommended by seller
+                                                    i12 Pro+ 6.1 inch Android S....</p>
+                                                <h6 class="font-weight-bolder">US $29:00 - $55:00</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="">
+                                        <div class="card text-center mt-2" style="width: auto;">
+                                            <img src="image/Samsung-Galaxy-S21-02.jpg" class="card-img-top "
+                                                alt="card image">
+                                            <div class="px-2">
+                                                <p class="card-text m-0 text-secondary">Recommended by seller
+                                                    i12 Pro+ 6.1 inch Android S....</p>
+                                                <h6 class="font-weight-bolder">US $29:00 - $55:00</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- second tab div start -->
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <div class="m-2" id="co-first">
+                                <p class="text-secondary">Company Album</p>
+                                <div class="row m-2">
+                                    <div class="col-3 overflow-hidden rounded-lg">
+                                        <img src="image/co.jpg" alt="co image" class="img-fluid">
+                                    </div>
+                                    <div class="col-3 overflow-hidden rounded-lg">
+                                        <img src="image/co.jpg" alt="co image" class="img-fluid">
+                                    </div>
+                                    <div class="col-3 overflow-hidden rounded-lg">
+                                        <img src="image/co.jpg" alt="co image" class="img-fluid">
+                                    </div>
+                                    <div class="col-3 overflow-hidden rounded-lg">
+                                        <img src="image/co.jpg" alt="co image" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <table class="table table-bordered text-center mt-4 " style="font-size: 13px;">
+                                    <tr>
+                                        <td style="background-color: #FAFAFA;" class=" p-2">Business Type</td>
+                                        <td class="bg-white p-2">Trading Company
+                                        </td>
+                                        <td class="bg-white p-2">Country / Region</td>
+                                        <td style="background-color: #FAFAFA;" class=" p-2">Zhejiang, China</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color: #FAFAFA;" class=" p-2">Main Products</td>
+                                        <td class="bg-white p-2"><a href="">mobile phone</a>, <a href="">Tablet PC</a>,
+                                            <a href="">Phone</a>, <a href="">Smart Watch</a>, <a href="">Earphone</a>
+                                        </td>
+                                        <td class="bg-white p-2">Total Employees</td>
+                                        <td style="background-color: #FAFAFA;" class=" p-2">51 - 100 People</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color: #FAFAFA;" class=" p-2">Year Established</td>
+                                        <td class="bg-white p-2">
+                                            2017</td>
+                                        <td class="bg-white p-2">Certifications</td>
+                                        <td style="background-color: #FAFAFA;" class=" p-2">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color: #FAFAFA;" class=" p-2">Product Certifications</td>
+                                        <td class="bg-white p-2">-</td>
+                                        <td class="bg-white p-2">Patents</td>
+                                        <td style="background-color: #FAFAFA;" class=" p-2">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color: #FAFAFA;" class=" p-2">Trademarks</td>
+                                        <td class="bg-white p-2">-</td>
+                                        <td class="bg-white p-2">-</td>
+                                        <td style="background-color: #FAFAFA;" class=" p-2">
+                                            22.00% <br>
+                                            20.00% <br>
+                                            20.00%
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h6 class="my-4 p-2 font-weight-bolder bg-secondary text-white">TRADE CAPABILITIES</h6>
+                            <div class="">
+                                <p class="font-weight-bolder">Main Markets & Product(s)</p>
+                                <table class="table table-bordered table-hover" style="font-size: 13px;">
+                                    <thead>
+                                        <tr>
+                                            <td>Main Market</td>
+                                            <td>Total Revenue</td>
+                                            <td>Main Product</td>
+                                            <td>Verified</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>22.00%</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>22.00%</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>22.00%</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>22.00%</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>22.00%</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>22.00%</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>22.00%</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>22.00%</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>22.00%</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>22.00%</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>22.00%</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>22.00%</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>22.00%</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- third section end -->
+
+                    </div>
+                    <div class="bg-white my-4 p-4 rounded">
+                        <p class="font-weight-bolder">Send your message to this supplier</p>
+                        <form action="" style="font-size: 14px;">
+                            <div class="row">
+                                <div class="col-2">
+                                    <label for="s-nam" class="mr-5"><span class="text-danger">*</span> To</label>
+
+                                </div>
+                                <div class="col-9">
+                                    <p class="font-weight-bolder d-inline-block" id="s-name">Supplier Name</p> <br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <label for="s-nam" class=""><span class="text-danger">*</span> Message</label>
+                                </div>
+                                <div class="col-9">
+                                    <textarea class="p-2" name="" id="" cols="60" rows="6"
+                                        placeholder="Enter your inquiry details such as product name, color, size, MOQ, FOB, etc."></textarea>
+                                    <p class="text-secondary" style="font-size: 11px;">Your message must be between
+                                        20-8000 characters</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <label for="s-nam" class=""><span class="text-danger">*</span> Quantity</label>
+                                </div>
+                                <div class="col-9">
+                                    <input type="number" value="1" min="0" style="width: 40%;"
+                                        class="form-control d-inline-block">
+                                    <select class="form-control d-inline-block" style="width: 40%;">
+                                        <option value="Acre/Acres">Acre/Acres</option>
+                                        <option value="Ampere/Amperes">Ampere/Amperes</option>
+                                        <option value="Bag/Bags">Bag/Bags</option>
+                                        <option value="Barrel/Barrels">Barrel/Barrels</option>
+                                        <option value="Blade/Blades">Blade/Blades</option>
+                                        <option value="Box/Boxes">Box/Boxes</option>
+                                        <option value="Bushel/Bushels">Bushel/Bushels</option>
+                                        <option value="buyer/buyers">buyer/buyers</option>
+                                        <option value="Carat/Carats">Carat/Carats</option>
+                                        <option value="Carton/Cartons">Carton/Cartons</option>
+                                        <option value="Case/Cases">Case/Cases</option>
+                                        <option value="Centimeter/Centimeters">Centimeter/Centimeters</option>
+                                        <option value="Chain/Chains">Chain/Chains</option>
+                                        <option value="Combo/Combos">Combo/Combos</option>
+                                        <option value="Cubic Centimeter/Cubic Centimeters">Cubic Centimeter/Cubic
+                                            Centimeters</option>
+                                        <option value="Cubic Foot/Cubic Feet">Cubic Foot/Cubic Feet</option>
+                                        <option value="Cubic Inch/Cubic Inches">Cubic Inch/Cubic Inches</option>
+                                        <option value="Cubic Meter/Cubic Meters">Cubic Meter/Cubic Meters</option>
+                                        <option value="Cubic Yard/Cubic Yards">Cubic Yard/Cubic Yards</option>
+                                        <option value="Day/Days">Day/Days</option>
+                                        <option value="Degrees Celsius">Degrees Celsius</option>
+                                        <option value="Degrees Fahrenheit">Degrees Fahrenheit</option>
+                                        <option value="Dozen/Dozens">Dozen/Dozens</option>
+                                        <option value="Dram/Drams">Dram/Drams</option>
+                                        <option value="Fluid Ounce/Fluid Ounces">Fluid Ounce/Fluid Ounces</option>
+                                        <option value="Foot/Feet">Foot/Feet</option>
+                                        <option value="Forty-Foot Container ">Forty-Foot Container </option>
+                                        <option value="Furlong/Furlongs">Furlong/Furlongs</option>
+                                        <option value="Gallon/Gallons">Gallon/Gallons</option>
+                                        <option value="Gill/Gills">Gill/Gills</option>
+                                        <option value="Grain/Grains">Grain/Grains</option>
+                                        <option value="Gram/Grams">Gram/Grams</option>
+                                        <option value="Gross">Gross</option>
+                                        <option value="Hectare/Hectares">Hectare/Hectares</option>
+                                        <option value="Hertz">Hertz</option>
+                                        <option value="Hour/Hours">Hour/Hours</option>
+                                        <option value="Inch/Inches">Inch/Inches</option>
+                                        <option value="Kiloampere/Kiloamperes">Kiloampere/Kiloamperes</option>
+                                        <option value="Kilogram/Kilograms">Kilogram/Kilograms</option>
+                                        <option value="Kilohertz">Kilohertz</option>
+                                        <option value="Kilometer/Kilometers">Kilometer/Kilometers</option>
+                                        <option value="Kiloohm/Kiloohms">Kiloohm/Kiloohms</option>
+                                        <option value="Kilovolt/Kilovolts">Kilovolt/Kilovolts</option>
+                                        <option value="Kilowatt/Kilowatts">Kilowatt/Kilowatts</option>
+                                        <option value="Liter/Liters">Liter/Liters</option>
+                                        <option value="Long Ton/Long Tons">Long Ton/Long Tons</option>
+                                        <option value="Megahertz">Megahertz</option>
+                                        <option value="Meter/Meters">Meter/Meters</option>
+                                        <option value="Metric Ton/Metric Tons">Metric Ton/Metric Tons</option>
+                                        <option value="Mile/Miles">Mile/Miles</option>
+                                        <option value="Milliampere/Milliamperes">Milliampere/Milliamperes</option>
+                                        <option value="Milligram/Milligrams">Milligram/Milligrams</option>
+                                        <option value="Millihertz">Millihertz</option>
+                                        <option value="Milliliter/Milliliters">Milliliter/Milliliters</option>
+                                        <option value="Millimeter/Millimeters">Millimeter/Millimeters</option>
+                                        <option value="Milliohm/Milliohms">Milliohm/Milliohms</option>
+                                        <option value="Millivolt/Millivolts">Millivolt/Millivolts</option>
+                                        <option value="Milliwatt/Milliwatts">Milliwatt/Milliwatts</option>
+                                        <option value="Month/Months">Month/Months</option>
+                                        <option value="Nautical Mile/Nautical Miles">Nautical Mile/Nautical Miles
+                                        </option>
+                                        <option value="Ohm/Ohms">Ohm/Ohms</option>
+                                        <option value="Ounce/Ounces">Ounce/Ounces</option>
+                                        <option value="Pack/Packs">Pack/Packs</option>
+                                        <option value="Pair/Pairs">Pair/Pairs</option>
+                                        <option value="Pallet/Pallets">Pallet/Pallets</option>
+                                        <option value="Parcel/Parcels">Parcel/Parcels</option>
+                                        <option value="Perch/Perches">Perch/Perches</option>
+                                        <option value="Piece/Pieces">Piece/Pieces</option>
+                                        <option value="Pint/Pints">Pint/Pints</option>
+                                        <option value="Plant/Plants">Plant/Plants</option>
+                                        <option value="Pole/Poles">Pole/Poles</option>
+                                        <option value="Pound/Pounds">Pound/Pounds</option>
+                                        <option value="Quart/Quarts">Quart/Quarts</option>
+                                        <option value="Quarter/Quarters">Quarter/Quarters</option>
+                                        <option value="Quarter/Quarters">Quarter/Quarters</option>
+                                        <option value="Rod/Rods">Rod/Rods</option>
+                                        <option value="Roll/Rolls">Roll/Rolls</option>
+                                        <option value="Set/Sets">Set/Sets</option>
+                                        <option value="Sheet/Sheets">Sheet/Sheets</option>
+                                        <option value="Short Ton/Short Tons">Short Ton/Short Tons</option>
+                                        <option value="Square Centimeter/Square Centimeters">Square Centimeter/Square
+                                            Centimeters</option>
+                                        <option value="Square Foot/Square Feet">Square Foot/Square Feet</option>
+                                        <option value="Square Inch/Square Inches">Square Inch/Square Inches</option>
+                                        <option value="Square Meter/Square Meters">Square Meter/Square Meters</option>
+                                        <option value="Square Mile/Square Miles">Square Mile/Square Miles</option>
+                                        <option value="Square Yard/Square Yards">Square Yard/Square Yards</option>
+                                        <option value="Stone/Stones">Stone/Stones</option>
+                                        <option value="Strand/Strands">Strand/Strands</option>
+                                        <option value="Ton/Tons">Ton/Tons</option>
+                                        <option value="Tonne/Tonnes">Tonne/Tonnes</option>
+                                        <option value="Tray/Trays">Tray/Trays</option>
+                                        <option value="Twenty-Foot Container">Twenty-Foot Container</option>
+                                        <option value="Unit/Units">Unit/Units</option>
+                                        <option value="Volt/Volts">Volt/Volts</option>
+                                        <option value="Watt/Watts">Watt/Watts</option>
+                                        <option value="Week/Weeks">Week/Weeks</option>
+                                        <option value="Wp">Wp</option>
+                                        <option value="Yard/Yards">Yard/Yards</option>
+                                        <option value="Year/Years">Year/Years</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-2">
+                                </div>
+                                <div class="col-9" style="font-size: 14px;">
+                                    <input type="checkbox" name="" id="">
+                                    Recommend matching suppliers if this supplier doesn’t contact me on Message Center
+                                    within 24 hours. <br>
+                                    <input type="checkbox" name="" id="">
+                                    I agree to share my Business Card to the supplier. <br> <br>
+                                    <input type="submit" value="Send" class="btn btn-danger">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- forth section start -->
+                    <div class="row bg-white mx-1 mb-4 rounded">
+                        <h5 class="font-weight-bolder p-2">Supplier's popular products</h5>
+                        <div class="container">
+                            <div class="row blog">
+                                <div class="col-md-12">
+                                    <div id="blogCarousel12" class="carousel slide" data-ride="carousel">
+
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#blogCarousel12" data-slide-to="0" class="active"></li>
+                                            <li data-target="#blogCarousel12" data-slide-to="1"></li>
+                                        </ol>
+
+                                        <!-- Carousel items -->
+                                        <div class="carousel-inner" style="height: 330px;">
+
+                                            <div class="carousel-item active">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!--.row-->
+                                            </div>
+                                            <!--.item-->
+
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="#" class="text-center">
+                                                            <img src="image/Samsung-Galaxy-S21-02.jpg"
+                                                                class="img-fluid d-block mx-auto" alt="Image"
+                                                                style="max-height:40%;">
+                                                            <p class="text-secondary">i12 pro max 6.7-inch
+                                                                high-definition face recognitio.....</p>
+                                                            <p class="font-weight-bolder">US $45:00 - $75:00</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!--.row-->
+                                            </div>
+                                            <!--.item-->
+
+                                        </div>
+                                        <!--.carousel-inner-->
+                                    </div>
+                                    <!--.Carousel-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- forth section end -->
+                </div>
+                <!-- side bar start -->
+                <div class="col-3 " style="background-color: #F2F3F7;;">
+                    <div class="p-3 shadow-sm rounded position-sticky bg-white mt-3" style="font-size: 13px; top: 5%;">
+                        <p class="text-secondary d-inline-block">Ship to <a href="">Pakistan</a></p>
+                        <p class="text-black d-inline-block float-right font-weight-bolder">To Be Negotiated</p>
+                        <p class="text-secondary d-inline-block">Processing Time - days <i class="far fa-clock"></i></p>
+                        <a href=""
+                            class="btn btn-danger bg-alibaba-bt bg-alibaba bg-alibaba-bt d-block mt-3 rounded-pill">Start
+                            Order</a>
+                        <a href="" class="btn btn-outline-danger bg-alibaba-outline mt-3 d-block rounded-pill"><i
+                                class="far fa-comment-dots"></i> Chatt Now</a>
+                        <a href="" class="btn btn-outline-danger bg-alibaba-outline mt-3 d-block rounded-pill"><i
+                                class="far fa-envelope"></i> Contect Suppliers</a>
+                        <a href="" class="text-center d-block my-2"><i class="far fa-cart-plus"></i> Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main end -->
+
+    <!-- footer start -->
+    <footer class="px-md-5 pt-5 text-white">
+        <p class="text-center font-weight-lighter">Trade Alert - Delivering the latest product trends and industry news
+            straight to your
+            inbox.</p>
+        <div class="col-sm-9 col-12 col-md-6 offset-md-3 my-3">
+            <div class="row">
+                <div class="col-sm-10 col-12 text-center text-sm-left">
+                    <div class="input-group ">
+                        <input type="email" placeholder="Your Email" class="form-control bg-dark text-white">
+                    </div>
+                    <small class="text-white-50 ">We’ll never share your email address with a third-party.</small>
+                </div>
+                <div class="col-sm-2 col-4 offset-4 offset-sm-0 mt-3 mt-sm-0">
+                    <div class="input-group mx-auto text-center">
+                        <input type="submit" class="btn btn-outline-light" value="SUBSCRIBE">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-sm-flex justify-content-between px-5 text-center">
+            <div class="">
+                <p>Customer Service</p>
+                <ul class="list-unstyled" style="font-size: 12px;">
+                    <li><a href="" class="text-white">Help Center</a></li>
+                    <li><a href="" class="text-white">Contect Us</a></li>
+                    <li><a href="" class="text-white">Report Abouse</a></li>
+                    <li><a href="" class="text-white">Submit a Dispute</a></li>
+                    <li><a href="" class="text-white">Polices & Rules</a></li>
+                    <li><a href="" class="text-white">Get Paid for your feedback</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <p>About Us</p>
+                <ul class="list-unstyled" style="font-size: 12px;">
+                    <li><a href="" class="text-white">Help Center</a></li>
+                    <li><a href="" class="text-white">Contect Us</a></li>
+                    <li><a href="" class="text-white">Report Abouse</a></li>
+                    <li><a href="" class="text-white">Submit a Dispute</a></li>
+                    <li><a href="" class="text-white">Polices & Rules</a></li>
+                    <li><a href="" class="text-white">Get Paid for your feedback</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <p>Source On Site.com</p>
+                <ul class="list-unstyled" style="font-size: 12px;">
+                    <li><a href="" class="text-white">Help Center</a></li>
+                    <li><a href="" class="text-white">Contect Us</a></li>
+                    <li><a href="" class="text-white">Report Abouse</a></li>
+                    <li><a href="" class="text-white">Submit a Dispute</a></li>
+                    <li><a href="" class="text-white">Polices & Rules</a></li>
+                    <li><a href="" class="text-white">Get Paid for your feedback</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <p>Sell On Site.com</p>
+                <ul class="list-unstyled" style="font-size: 12px;">
+                    <li><a href="" class="text-white">Help Center</a></li>
+                    <li><a href="" class="text-white">Contect Us</a></li>
+                    <li><a href="" class="text-white">Report Abouse</a></li>
+                    <li><a href="" class="text-white">Submit a Dispute</a></li>
+                    <li><a href="" class="text-white">Polices & Rules</a></li>
+                    <li><a href="" class="text-white">Get Paid for your feedback</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <p>Trade Services</p>
+                <ul class="list-unstyled" style="font-size: 12px;">
+                    <li><a href="" class="text-white">Help Center</a></li>
+                    <li><a href="" class="text-white">Contect Us</a></li>
+                    <li><a href="" class="text-white">Report Abouse</a></li>
+                    <li><a href="" class="text-white">Submit a Dispute</a></li>
+                    <li><a href="" class="text-white">Polices & Rules</a></li>
+                    <li><a href="" class="text-white ">Get Paid for your feedback</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="border border-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-9 col-lg-6  d-none d-sm-block">
+                    <Span style="font-size: 14px; " class="align-middle">Download:</Span>
+                    <a href="" class="btn-sm btn-secondary px-4 pt-3 align-middle">
+                        <i class="fab fa-apple d-inline-block m-0" style="font-size: 25px;"></i>
+                        <span class="d-inline-block m-0">
+                            <span class="d-block m-0 pl-2 text-white-50" style="font-size: 10px;">Available On the <br>
+                                <span style="font-size: 14px !important;" class="text-white">App
+                                    Store</span></span>
+                        </span>
+                    </a>
+                    <a href="" class="btn-sm btn-success px-4 pt-3 ml-2 align-middle">
+                        <i class="fab fa-android d-inline-block m-0" style="font-size: 25px;"></i>
+                        <span class="d-inline-block m-0">
+                            <span class="d-block m-0 pl-2 text-white-50" style="font-size: 10px;">Available On the <br>
+                                <span style="font-size: 14px !important;" class="text-white">Google Store</span></span>
+                        </span>
+                    </a>
+
+                </div>
+                <div class="col-3  d-none d-sm-block">
+                    <span class="align-middle" style="font-size: 14px !important;">Supplier App:</span>
+                    <a href="" class="align-middle text-primary" style="font-size: 30px;"><i
+                            class="fab fa-app-store-ios"></i></a>
+                </div>
+                <div class="col-12 text-center col-lg-3">
+                    <span class="align-middle" style="font-size: 14px !important;">FOLLOW US:</span>
+                    <div class="d-inline-block align-middle" style="font-size: 28px;">
+                        <a href=""><i class="fab fa-facebook-square text-white"></i></a>
+                        <a href=""><i class="fab fa-twitter-square text-white"></i></a>
+                        <a href=""><i class="fab fa-youtube-square text-white"></i></a>
+                        <a href=""><i class="fab fa-linkedin text-white"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-5 py-3 text-center" style="font-size: 12px;">
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com </a> <br>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com </a>
+                <div class="my-3">
+                    <span>Browse Alphabetically:</span>
+                    <a href="" class="text-white">Example.com | </a>
+                    <a href="" class="text-white">Example.com | </a>
+                    <a href="" class="text-white">Example.com | </a>
+                    <a href="" class="text-white">Example.com | </a>
+                    <a href="" class="text-white">Example.com | </a>
+                    <a href="" class="text-white">Example.com </a>
+                </div>
+                <div class="my-2">
+                    <a href="" class="text-white">Product Listing Policy</a> -
+                    <a href="" class="text-white"> Privacy Policy</a> -
+                    <a href="" class="text-white">Terms of Use </a> -
+                    <a href="" class="text-white">User Information Legal Enquiry Guide</a>
+                </div>
+                <p class="text-white text-center" style="font-size: 14px;">© 2021 Site.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btn-burg').click(function () {
+                $('#nav-li').toggleClass('d-none');
+            });
+            $('#cam').click(function () {
+                $('.upload-img').toggle();
+                $('#x').click(function () {
+                    $('.upload-img').hide();
+                });
+            });
+            $('#msg-box').hover(function () {
+                $('.msg-box').show();
+                $('.user-box').hide();
+                $('.order-box').hide();
+                $('.cart-box').hide();
+            }, function () {
+                $('.msg-box').hover(function () {
+                    $('.msg-box').show();
+                }, function () {
+                    $('.msg-box').hide();
+                });
+
+            });
+
+            $('#order-box').hover(function () {
+                $('.order-box').show();
+                $('.msg-box').hide();
+                $('.user-box').hide();
+                $('.cart-box').hide();
+            }, function () {
+                $('.order-box').hover(function () {
+                    $('.order-box').show();
+                }, function () {
+                    $('.order-box').hide();
+                });
+
+            });
+
+            $('#user-box').hover(function () {
+                $('.user-box').show();
+                $('.msg-box').hide();
+                $('.order-box').hide();
+                $('.cart-box').hide();
+            }, function () {
+                $('.user-box').hover(function () {
+                    $('.user-box').show();
+                }, function () {
+                    $('.user-box').hide();
+                });
+
+            });
+
+            $('#cart-box').hover(function () {
+                $('.cart-box').show();
+                $('.msg-box').hide();
+                $('.order-box').hide();
+                $('.user-box').hide();
+            }, function () {
+                $('.cart-box').hover(function () {
+                    $('.cart-box').show();
+                }, function () {
+                    $('.cart-box').hide();
+                });
+
+            });
+
+
+
+        });
+    </script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // optional
+        $('#blogCarousel').carousel({
+            interval: 5000
+        });
+        $('#blogCarousel12').carousel({
+            interval: 5000
+        });
+    </script>
+</body>
+
+</html>
