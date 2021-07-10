@@ -9,6 +9,7 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
     <title>Sign In</title>
     <style>
         body {
@@ -16,8 +17,8 @@
         }
 
         main {
-            height: 100vh;
-            width: 100vw;
+            /* height: 100vh; */
+            /* width: 100vw; */
             background-image: url('image/backh.jpg');
             background-repeat: no-repeat;
             background-size: cover;
@@ -26,32 +27,511 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <div class="container">
             <div class="py-4 ">
                 <a href="index.html"><img src="image/logo2.jpg" alt="Logo"></a>
             </div>
+    </header> -->
+    <!-- header start -->
+    <header>
+        <div class="container-fluid text-secondary">
+            <div class="row py-3 border">
+                <div class="col-12 col-lg-2 ">
+                    <a href="index.html">
+                        <img src="image/logo2.jpg" alt="logo" class="img-fluid mx-auto d-block">
+                    </a>
+                </div>
+                <div class="col-12 pt-1 col-lg-10 pr-lg-2 px-5 px-lg-0 ">
+                    <form action="">
+                        <div class="b-alibaba bg-white  rounded-pill overflow-hidden-sm">
+                            <div class="input-group h-40">
+                                <div class="input-group-prepend d-none d-sm-block">
+                                    <button class="btn bg-white pl-4  pr-2 dropdown-toggle rounded-pill h-40 "
+                                        type="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Products</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Products</a>
+                                        <a class="dropdown-item" href="#">Suppliers</a>
+                                    </div>
+                                </div>
+                                <input type="text"
+                                    class="form-control pl-2 border-bottom-0 border-top-0 border-left border-right-0 h-40"
+                                    placeholder="What are you looking for...">
+                                <div class="input-group-append bg-white px-3 py-2 h-40 border-0 d-none d-sm-block"><i
+                                        class="fas fa-camera" id="cam"></i></div>
+                                <button class="input-group-append search-button"><i class="fas fa-search"></i>
+                                    Search</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- <div class="col-lg-2 left-side text-center col-12 pt-3 pt-lg-0 ">
+                    <div class="row d-flex justify-content-around">
+                        <div id="user-box">
+                            <i class="far fa-user"></i>
+                            <div class="d-inline-block text-center mx-3">
+                                <a href="signin.html">Sign In</a> <br>
+                                <a href="join.html">join Free</a>
+                            </div>
+                        </div>
+                        <div id="msg-box">
+                            <i class="fas fa-comment-dots d-block"></i>
+                            <a href="">Messages</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- upload img -->
+        <div class="upload-img rounded-lg shadow">
+            <p class="bg-danger text-light d-inline-block px-2  position-absolute" id="x"
+                style="cursor: pointer; top: 1.9%; right: 1%;">x</p>
+            <label for="file" class="btn bg-white border">Upload Image</label>
+            <input type="file" name="file" id="file" hidden>
+            <p>Max 5MB per Image</p>
+        </div>
+        <!-- msg box star -->
+        <div class="msg-boxs text-center text-secondary">
+            <div class="user-box shadow p-3   bg-white ">
+                <h5 class="text-left font-weight-bold">Get Started Now</h5>
+                <a href="signin.html" class="bg-alibaba d-block p-1 text-white">Sign In</a>
+                <p>or</p>
+                <a href="join.html">join Free</a>
+            </div>
+            <div class="msg-box shadow p-2 bg-white ">
+                <p>Get Started Now</p>
+            </div>
+        </div>
     </header>
+    <!-- header end -->
+    <!-- nav start -->
+    <nav class="bg-white border py-2  ">
+        <div class="text-center d-lg-none" style="font-size: 30px;">
+            <i class="fas fa-align-justify" id="btn-burg"></i>
+        </div>
+        <ul class="list-unstyled d-lg-flex mb-0 justify-content-md-start text-center d-none " id="nav-li">
+            <li class="border-right bg-white px-3" id="">
+                <i class="fas fa-align-justify d-none d-lg-inline-block"></i>
+                Categories <i class="fas fa-caret-down"></i>
+                <!-- Categories list -->
+                <div class="li-list">
+                    <div class=" bg-white  p-4 border shadow position-relative li-list-child">
+                        <ul class="list-unstyled">
+                            <li class="p-2">
+                                <a href="">Example 1</a> / <a href="">Example 1A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                        <li><a href="">Example 1</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                        <li><a href="">Example 1A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 2</a> / <a href="">Example 2A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                        <li><a href="">Example 2</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                        <li><a href="">Example 2A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 3</a> / <a href="">Example 3A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                        <li><a href="">Example 3</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                        <li><a href="">Example 3A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 4</a> / <a href="">Example 4A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                        <li><a href="">Example 4</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                        <li><a href="">Example 4A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 5</a> / <a href="">Example 5A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                        <li><a href="">Example 5</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                        <li><a href="">Example 5A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 6</a> / <a href="">Example 6A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                        <li><a href="">Example 6</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                        <li><a href="">Example 6A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 7</a> / <a href="">Example 7A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                        <li><a href="">Example 7</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                        <li><a href="">Example 7A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 8</a> / <a href="">Example 8A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                        <li><a href="">Example 8</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                        <li><a href="">Example 8A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 9</a> / <a href="">Example 9A</a>
+                                <i class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                        <li><a href="">Example 9</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                        <li><a href="">Example 9A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 10</a> / <a href="">Example 10A</a> <i
+                                    class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                        <li><a href="">Example 10</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                        <li><a href="">Example 10A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 11</a> / <a href="">Example 11A</a> <i
+                                    class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                        <li><a href="">Example 11</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                        <li><a href="">Example 11A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="p-2">
+                                <a href="">Example 112</a> / <a href="">Example 12A</a> <i
+                                    class="fas fa-caret-right float-right ml-5"></i>
+                                <div class="li-child position-absolute bg-white border shadow p-5 ">
+                                    <ul class="list-unstyled float-left mr-5 ">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                        <li><a href="">Example 12</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled float-right mx-5">
+                                        <h4 class="bg-info text-white p-2">Example</h4>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                        <li><a href="">Example 12A</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </a>
+            </li>
+            <li class=" px-3"> Help <i class="fas fa-caret-down"></i>
+                <div class="li-list" style="left: -35%;">
+                    <div class=" bg-white  p-4 d-block d-lg-inline-block border shadow position-relative">
+                        <ul class="list-unstyled">
+                            <li class="p-2">
+                                <i class="fas fa-caret-right"></i>
+                                <a href="">Example 1</a>
+                            </li>
+                            <li class="p-2">
+                                <i class="fas fa-caret-right"></i>
+                                <a href="">Example 1</a>
+                            </li>
+                            <li class="p-2">
+                                <i class="fas fa-caret-right"></i>
+                                <a href="">Example 1</a>
+                            </li>
+                            <li class="p-2">
+                                <i class="fas fa-caret-right"></i>
+                                <a href="">Example 1</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!-- nav end -->
     <main class="p-md-5 p-1">
         <div class="container p-md-5 p-2">
             <div class="col-12  col-lg-5 col-xl-4 bg-white py-4 px-3 rounded shadow-sm">
-                <form>
+                <form action="homepage.html">
                     <div class="form-group">
                         <label for="Email">Email address</label>
                         <input type="email" class="form-control" id="Email" placeholder="Type Your Email" required>
                     </div>
                     <div class="form-group">
                         <label for="Password">Password</label>
-                        <a href="" class="float-right" style="font-weight: 14px;">Forgot Password ?</a>
-                        <input type="password" class="form-control" id="Password" placeholder="Type Your Password" required>
+                        <a href="" class="float-right text-primary" style="font-weight: 14px;">Forgot Password ?</a>
+                        <input type="password" class="form-control" id="Password" placeholder="Type Your Password"
+                            required>
                     </div>
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
                         <label class="form-check-label" for="exampleCheck1">Stay Signed In</label>
                     </div>
                     <button type="submit" class="btn btn-warning font-weight-bold w-100 mb-2">Log In</button>
-                    <a href="" class="float-left" style="font-weight: 14px;">Mobile Number Sign</a>
-                    <a href="join.html" class="float-right " style="font-weight: 14px;">Join Free</a>
+                    <a href="" class="float-left text-primary" style="font-weight: 14px;">Mobile Number Sign In</a>
+                    <a href="join.html" class="float-right text-primary " style="font-weight: 14px;">Join Free</a>
                     <div class="container mt-5">
                         <hr class="border">
                         <div class="d-flex justify-content-around">
@@ -75,7 +555,157 @@
             </div>
         </div>
     </main>
-    </div>
+    <!-- footer start -->
+    <footer class="px-md-5 pt-5 text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-9 col-lg-6  d-none d-sm-block">
+                    <Span style="font-size: 14px; " class="align-middle">Download:</Span>
+                    <a href="" class="btn-sm btn-secondary px-4 pt-3 align-middle">
+                        <i class="fab fa-apple d-inline-block m-0" style="font-size: 25px;"></i>
+                        <span class="d-inline-block m-0">
+                            <span class="d-block m-0 pl-2 text-white-50" style="font-size: 10px;">Available On the <br>
+                                <span style="font-size: 14px !important;" class="text-white">App
+                                    Store</span></span>
+                        </span>
+                    </a>
+                    <a href="" class="btn-sm btn-success px-4 pt-3 ml-2 align-middle">
+                        <i class="fab fa-android d-inline-block m-0" style="font-size: 25px;"></i>
+                        <span class="d-inline-block m-0">
+                            <span class="d-block m-0 pl-2 text-white-50" style="font-size: 10px;">Available On the <br>
+                                <span style="font-size: 14px !important;" class="text-white">Google Store</span></span>
+                        </span>
+                    </a>
+
+                </div>
+                <div class="col-3  d-none d-sm-block">
+                    <span class="align-middle" style="font-size: 14px !important;">Supplier App:</span>
+                    <a href="" class="align-middle text-primary" style="font-size: 30px;"><i
+                            class="fab fa-app-store-ios"></i></a>
+                </div>
+                <div class="col-12 text-center col-lg-3">
+                    <span class="align-middle" style="font-size: 14px !important;">FOLLOW US:</span>
+                    <div class="d-inline-block align-middle" style="font-size: 28px;">
+                        <a href=""><i class="fab fa-facebook-square text-white"></i></a>
+                        <a href=""><i class="fab fa-twitter-square text-white"></i></a>
+                        <a href=""><i class="fab fa-youtube-square text-white"></i></a>
+                        <a href=""><i class="fab fa-linkedin text-white"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-5 py-3 text-center" style="font-size: 12px;">
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com </a> <br>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com | </a>
+                <a href="" class="text-white">Example.com </a>
+                <div class="my-3">
+                    <span>Browse Alphabetically:</span>
+                    <a href="" class="text-white">Example.com | </a>
+                    <a href="" class="text-white">Example.com | </a>
+                    <a href="" class="text-white">Example.com | </a>
+                    <a href="" class="text-white">Example.com | </a>
+                    <a href="" class="text-white">Example.com | </a>
+                    <a href="" class="text-white">Example.com </a>
+                </div>
+                <div class="my-2">
+                    <a href="" class="text-white">Product Listing Policy</a> -
+                    <a href="" class="text-white"> Privacy Policy</a> -
+                    <a href="" class="text-white">Terms of Use </a> -
+                    <a href="" class="text-white">User Information Legal Enquiry Guide</a>
+                </div>
+                <p class="text-white text-center" style="font-size: 14px;">© 2021 Site.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btn-burg').click(function () {
+                $('#nav-li').toggleClass('d-none');
+            });
+            $('#cam').click(function () {
+                $('.upload-img').toggle();
+                $('#x').click(function () {
+                    $('.upload-img').hide();
+                });
+            });
+            $('#msg-box').hover(function () {
+                $('.msg-box').show();
+                $('.user-box').hide();
+                $('.order-box').hide();
+                $('.cart-box').hide();
+            }, function () {
+                $('.msg-box').hover(function () {
+                    $('.msg-box').show();
+                }, function () {
+                    $('.msg-box').hide();
+                });
+
+            });
+
+            $('#order-box').hover(function () {
+                $('.order-box').show();
+                $('.msg-box').hide();
+                $('.user-box').hide();
+                $('.cart-box').hide();
+            }, function () {
+                $('.order-box').hover(function () {
+                    $('.order-box').show();
+                }, function () {
+                    $('.order-box').hide();
+                });
+
+            });
+
+            $('#user-box').hover(function () {
+                $('.user-box').show();
+                $('.msg-box').hide();
+                $('.order-box').hide();
+                $('.cart-box').hide();
+            }, function () {
+                $('.user-box').hover(function () {
+                    $('.user-box').show();
+                }, function () {
+                    $('.user-box').hide();
+                });
+
+            });
+
+            $('#cart-box').hover(function () {
+                $('.cart-box').show();
+                $('.msg-box').hide();
+                $('.order-box').hide();
+                $('.user-box').hide();
+            }, function () {
+                $('.cart-box').hover(function () {
+                    $('.cart-box').show();
+                }, function () {
+                    $('.cart-box').hide();
+                });
+
+            });
+
+
+
+        });
+    </script>
 </body>
 
 </html>
